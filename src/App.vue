@@ -54,8 +54,15 @@
   }
 
 
+  // Get percentage of wins
+  const winPercentage = computed(() => {
+    const total = wins.value + draws.value + losses.value
+    return total ? (wins.value / total) * 100 : 0
+  })
+
+
   // Save game in localStorage
-  saveGame = () => {
+  const saveGame = () => {
     localStorage.setItem('wins', wins.value)
     localStorage.setItem('draws', draws.value)
     localStorage.setItem('losses', losses.value)
@@ -63,10 +70,18 @@
 
 
   // Load saved game from localStorage
-  loadGame = () => {
+  const loadGame = () => {
     wins.value = localStorage.getItem('wins')
     draws.value = localStorage.getItem('draws')
     losses.value = localStorage.getItem('losses')
+  }
+
+
+  // Reset round
+  const resetRound = () => {
+    choice.value = null
+    computerChoice.value = null
+    verdict.value = null
   }
 
 </script>
