@@ -10,7 +10,7 @@ A simple game of rock, paper, scissors made with Vue + Vite.
 <br/>
 
 ## :globe_with_meridians: Demo
-https://carla-ng.github.io/vue-rock-paper-scissors/
+[https://carla-ng.github.io/vue-rock-paper-scissors/](https://carla-ng.github.io/vue-rock-paper-scissors/)
 
 <br/>
 
